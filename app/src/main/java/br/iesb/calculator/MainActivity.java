@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //tela.setText("0123456789");
 
         valor = new Double[2];
+        valor[0] = 0.0;
+        valor[1] = 0.0;
         telaResultado = findViewById(R.id.txtResult);
     }
 
@@ -187,6 +189,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             count--;
         }
         valor[i] = Double.parseDouble(tmp);
+        visor();
     }
 
     //Passa o para a próxima posição do vetor

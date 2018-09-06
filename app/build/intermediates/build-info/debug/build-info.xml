@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="3.1.4"
-    timestamp="1536188676441"
+    timestamp="1536192984850"
     token="4442870341686298728"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -69,7 +69,24 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1536188676441"
+        timestamp="1536190773223"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\SEA\Desktop\PDM\projetos\Calculator\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1536192910377"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\SEA\Desktop\PDM\projetos\Calculator\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1536192984850"
         verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
