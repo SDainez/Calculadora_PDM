@@ -184,10 +184,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void del(int i){
         String tmp = String.valueOf(valor[i]);
-        if (tmp.length() > 0) {
-            tmp = tmp.substring (0, tmp.length() - 1);
+        if (valor[i] > 0) {
+            if(!dot){
+                tmp = tmp.substring (0, tmp.length() - 3);
+            }else {
+                tmp = tmp.substring (0, tmp.length() - 1);
+            }
             count--;
         }
+        if (tmp.isEmpty())
+            tmp = "0";
         valor[i] = Double.parseDouble(tmp);
         visor();
     }
