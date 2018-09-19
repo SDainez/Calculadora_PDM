@@ -1,4 +1,4 @@
-#Wed Sep 05 20:03:39 BRT 2018
-base.0=C\:\\Users\\SEA\\Desktop\\PDM\\projetos\\Calculator\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
+#Sun Sep 09 22:55:38 BRT 2018
+base.0=C\:\\Users\\Asafe\\Desktop\\PDM\\projetos\\Calculadora_PDM\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
 path.0=classes.dex
 renamed.0=classes.dex

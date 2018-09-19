@@ -5,13 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import java.lang.Math;
+import java.lang.String;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     int i = 0;
+    int j = 0;
     int count = 0;
     Double[] valor;
     Double result = 0.0;
-    String operator;
+    String operator = "nada";
     static int INVALID = 999999999;
     TextView telaResultado;
     boolean dot = false;
@@ -45,8 +47,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnDiv: operator = "div";
                 proximoNumero();
                 break;
-            case R.id.btnEqual: calcular();
-                count = 0;
+            case R.id.btnEqual:
+                if (operator != "nada"){
+                    calcular();
+                    count = 0;
+                }
                 break;
             case R.id.btnThanos: del(i);
                 break;
@@ -147,7 +152,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
             }
         }
-
+        if(valor[i]==0.0)
+            j++;
         visor();
         result = 0.0;
     }
@@ -155,16 +161,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void calcular(){
         switch (operator){
             //Executa as operações e sai do switch
-            case "sum": result = (valor[0] + valor[1]); break;
-            case "sub": result = valor[0] - valor[1]; break;
-            case "mult": result = valor[0] * valor[1]; break;
-            case "div": result = valor[0] / valor[1]; break;
+            case "sum":
+                result = (valor[0] + valor[1]);
+                break;
+            case "sub":
+                result = valor[0] - valor[1];
+                break;
+            case "mult":
+                if(j == 1) valor[1] = 1.0;
+                result = valor[0] * valor[1];
+                break;
+            case "div":
+                if(j == 1) valor[1] = 1.0;
+                result = valor[0] / valor[1];
+                break;
         }
         //Se for um valor inválido
         if (result<INVALID) {
             valor[0] = result;  //Para executar mais operações
             valor[1] = 0.0;      //Passa para o segundo valor
             i = 1;
+            j = 1;
         }
     }
 
